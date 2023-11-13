@@ -1,9 +1,17 @@
 package metier;
 
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlRootElement;
+import jakarta.xml.bind.annotation.XmlTransient;
+
+@XmlRootElement
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Compte
 {
     private int code ;
     private double solde ;
+    @XmlTransient
     private String dateDeCreation ;
 
     public Compte(int code , double solde , String dateDeCreation)
